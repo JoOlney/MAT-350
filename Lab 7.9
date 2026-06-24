@@ -1,0 +1,25 @@
+%Consider the matrix A.
+A = [1 -2; 0 1; 1 0]
+
+%The command svd() returns three matrices, namely the mxm orthogonal matrix U, the mxn 
+%diagonal matrix S, and the nxn orthogonal matrix V, the singular value decomposition
+%of A which satisfies A=USV'.
+[U, S, V] = svd(A)
+
+%Verify that the appropriate product of the matrices found using the svd() command
+%results in the matrix A.  
+checkA = U*S*V.'
+%Use the following matrix for this activity.
+      -6 8 6 9
+B = [ 3 2 4 -8 ] 
+    5 -4 -7 -3
+
+
+%Enter the matrix B.
+B = [ -6 8 6 9; 3 2 4 -8; 5 -4 -7 -3]
+%Use the command svd() to find three matrices, namely the mxm orthogonal matrix U, the mxn 
+%diagonal matrix S, and the nxn orthogonal matrix V, of the singular value decomposition of B.
+[ U, S, V] = svd(B);
+%Verify that the appropriate product of the matrices found using the svd() command
+%results in the matrix B.  Store this product in checkB. 
+checkB = U * S * V.';

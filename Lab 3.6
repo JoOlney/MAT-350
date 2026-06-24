@@ -1,0 +1,31 @@
+%In this activity you will find the cross product of two vectors in 3-space and apply appropriate
+%MATLAB commands to find the area of a parallelepiped (cross(), dot(), and abs()).
+
+%Recall that a vector is an ordered n-tuple which may be represented as a row or column vector.
+%Define the three vectors u=[3, 2, 1], v=[-1, 3, 0], and w=[2, 2, 5].
+u = [3 2 1]
+v = [-1 3 0]
+w = [2 2 5]
+
+%Use the cross() command to find the cross product of vectors v and w.  The cross product is only
+%defined for vectors in 3-space.
+ans1 = cross(v,w)
+
+%The volume of a parallelepiped determined by three vectors is the absolute value of the scalar 
+%triple product of the three vectors.  The abs() command finds the absolute value of its argument.
+%Find the volume of the parallelepiped defined by u, v, and w.
+ans2 = abs(dot(u,cross(v,w)))
+
+
+Script:
+%Define the three vectors u=[1, 0, -4], v=[3, -3, 1], and w=[0, 2, 1].
+u = [1, 0, -4]
+v = [3, -3, 1]
+w = [0, 2, 1]
+%Find the cross product of u and w.  Store it in a1.
+a1 = cross(u,w);
+%Find the cross product of w and u.  Store it in a2.  Reversing the order of the cross product
+%results in a vector of the same length but opposite direction.  Note that a2 = -1(a1).
+a2 = cross(w,u);
+%Find the volume of the parallelepiped determined by vectors u, v, and w.  Store this value in z.
+z = abs(dot(u,cross(v,w)))

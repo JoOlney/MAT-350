@@ -1,0 +1,56 @@
+%Recall vectors are ordered n-tuples that can be represented as row or column vectors. 
+v1 = [2 -1 -1 1 3]
+v2 = [-3 2 5 1 3]
+v3 = [7 -4 -7 1 3]
+
+%Create a matrix C with the given vectors placed in the columns of C.
+C = [v1.' v2.' v3.']
+
+%Create the appropriately sized identity matrix, storing it in I.
+I = eye(5)
+
+%Augment C with the identity matrix.
+augC = [C I]
+
+%Row reduce augC.  
+B = rref(augC)
+
+%The pivot columns of the reduced matrix are used to identify which of the original vectors 
+%are included in the basis, along with which columns of the identity matrix are included in the basis. 
+
+%Create a matrix containing the basis vectors.  For this example, the first two vectors, namely v1 and v2,
+%are linearly independent vectors from the given set.  Those two vectors combined with the 1st,
+%2nd, and 4th columns of the identity matrix form a linearly indpendent set of vectors that spans 5-space.
+BasisMatrix = [v1.' v2.' I(:,1) I(:,2) I(:,4)]
+Utilize the following set of vectors in  for this activity.
+
+      1           -3          -1          0
+v1 = [-2 ]  v2 = [ 5 ]  v3 = [1 ]  v4 = [ -1 ]
+      2            -2         2           4
+     -1            2          0           -1
+
+
+ %Enter vectors v1, v2, v3, and v4.
+v1 = [1, -2, 2, -1]
+v2 = [-3, 5, -2, 2]
+v3 = [-1, 1, 2, 0]
+v4 = [0, -1, 4, -1]
+%Create a matrix A with the given vectors placed in the columns of A.
+A = [v1', v2', v3', v4'];
+disp(A)
+%Create the appropriately sized identity matrix, storing it in I.
+I = eye(size(A, 1));
+disp(I)
+%Augment A with the identity matrix, storing it in augA.
+augA = [A, I];
+disp(augA)
+%Row reduce augA, storing it in reduced_augA.  
+[reduced_augA, p] = rref(augA);
+disp(reduced_augA)
+%Use the pivot colulmns in reduced_augA to identify which of the original vectors are 
+%included in the basis, along with which columns of the identity matrix are included in 
+%the basis. Create a matrix containing the basis vectors, storing it in BasisMatrix.
+pivot_columns = p;
+disp(pivot_columns)
+BasisMatrix = augA(:, pivot_columns)
+disp(BasisMatrix)    

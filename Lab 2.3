@@ -1,0 +1,40 @@
+%In this activity you will utilize MATLAB to evaluate sums, differences, scalar 
+%products, and products of matrices.
+
+%Create the matrices A and B.
+A = [2 1; 0 -4]
+B = [1 -1; 3 2]
+
+%WARNING:  Matrix operations are only possible on matrices of the appropriate sizes.
+
+%Find the sum of A and B.
+A + B
+%Find the difference of A and B.
+A - B
+%Find the scalar product of 2 times A.
+2*A
+%Find the product of A and B.
+A*B
+
+Use the following matrices for this activity.
+A = 1 2 0   B = -2 0 3   C = 3 1
+  -1 -2 -3       1 3 1       2 -1
+                 0 1 -1      -1 0
+
+Scrpit:
+%Create the matrices A, B, and C.
+A = [ 1 2 0; -1 -2 3]
+B = [ -2 0 3; 1 3 1; 0 1 -1]
+C = [ 3 1; 2 -1; -1 0]
+%WARNING:  Matrix operations are only possible using matrices of the appropriate sizes.
+
+%Find the scalar product of 2 times A.  Store this product in Ans1. 
+Ans1 = [ 2 4 0; -2 -4 6]
+%Find the product of A and B.  Store this product in Ans2.
+Ans2 = [ 0 6 5; 0 -3 -8]
+%Use the appropriate identity matrix to find the sum of Ans2 and AI.  Store this product in Ans3 
+Ans3 = [ 0 6 5; 0 -3 -8] + [ 1 2 0; -1 -2 3]
+Ans3 = [ 1 8 5; -1 -5 -5]
+%Use the appropriate identity matrix to find CI minus 2 times the transpose of Ans2.  Store 
+%this product in Ans4.
+Ans4 = [ 3 1; -10 5; -11 16 ]

@@ -1,0 +1,39 @@
+%In this activity you will utilize MATLAB to evaluate the dot product of two vectors in two 
+%different ways, using the dot() command and using matrix multiplication.
+
+%Note:  A vector is an ordered n-tuple which may be represented as a matrix in the form of
+%a column vector (nx1 matrix) or a row vector (1xn matrix).
+
+%In this activity you will work with the vectors x and y in two different forms.  Create the 
+%column vectors xc and yc.  Create the row vectors xr and yr.
+xc = [1; 2; 3]
+yc = [2; 2; 2]
+xr = [1 2 3]
+yr = [2 2 2]
+
+%Use the dot() command to find the dot product of vectors x and y.  Note the result is the same
+%whether the dot product is found using the associated row vectors or column vectors.
+zc = dot(xc, yc)
+zr = dot(xr, yr)
+
+%Use the appropriate transpose when calcuating the dot product of x and y using matrix multiplication.
+%Note the result is the same whether it is found using the associated row vectors or column vectors.
+zdc = xc.' * yc
+zdr = xr * yr.'
+
+
+Script:
+%Create the row vectors a=[1, -2, 0, 7] and b=[-3, -1, 5, 0].
+a = [ 1, -2, 0, 7]
+b = [ -3, -1, 5, 0]
+%Create the column vectors c=[3, 1, 4, -2] and d=[0, -2, 2, 1].
+c = [ 3; 1; 4; -2]
+d = [ 0; -2; 2; 1]
+%Use the dot() command to find the dot product of vectors a and b.  Store this value in g1. 
+g1 = dot(a, b);
+%Use matrix multiplication to find the dot product of vectors a and b.  Store this value in g2.
+g2 = a * b';
+%Use the dot() command to find the dot product of vectors c and d.  Store this value in h1. 
+h1 = dot(c, d);
+%Use matrix multiplication to find the dot product of vectors c and d.  Store this value in h2.
+h2 = c' * d;

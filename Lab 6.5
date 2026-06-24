@@ -1,0 +1,30 @@
+In this activity you will find the matrix P that diagonalizes a given matrix and the resulting diagonal matrix D, and utilize these to indirectly find a higher power of the given matrix.
+Consider the matrix A.
+
+A = [ 1 1 ]
+      -2 4          
+Higher powers of A can be found indirectly using the diagonalization matrix P and resulting diagonal matrix D.  These matrices were
+found using the eig() command in zyLab 6.2.  The matrix A to the kth power can be indirectly calculated by .
+A = [1 1; -2 4]
+[P, D] = eig(A)
+
+%Indirectly find A^5 using P and D.  The command power(D,5) raises every element in the diagonal matrix D 
+%to the fifth power.  
+A5indirectly = P*power(D,5)*inv(P)
+
+%The same result can be found directly, but the direct method is not computationally practical for higher powers.
+A5directly = A^5
+Use the following matrix for this activity.
+
+      1 2 2 
+C = [ 2 1 2 ]
+      2 2 1 
+
+
+%Enter matrix C.
+C = [1 2 2; 2 1 2; 2 2 1]
+%Use the eig() command to find the matrix P that diagonalizes C and the resulting diagonal 
+%matrix D.  Store these in P and D, respectively.
+[P, D] = eig(C)
+%Indirectly find C^4, using P and D, and using the power() command on D.  Store the result in C4.
+C4 = P * power(D,4) * inv(P)                    
